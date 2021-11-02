@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="type_users">
+        <item>...</item>
+        <item>Administrador</item>
+        <item>Vendedor</item>
+        <item>Repartidor</item>
+    </string-array>
+</resources>

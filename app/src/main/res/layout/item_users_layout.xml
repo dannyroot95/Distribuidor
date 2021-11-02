@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="#F9F9F9"
+    android:orientation="vertical"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingTop="16dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/it_image"
+            android:layout_width="80dp"
+            android:src="@drawable/ic_add_photo_24"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+                android:id="@+id/it_name"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:id="@+id/it_dni"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:id="@+id/it_type_user"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:id="@+id/it_email"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

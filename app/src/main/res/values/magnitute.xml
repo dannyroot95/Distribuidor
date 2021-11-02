@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="magnitude">
+        <item>Kg</item>
+        <item>Lt</item>
+        <item>Gr</item>
+        <item>Ml</item>
+        <item>Mg</item>
+    </string-array>
+</resources>

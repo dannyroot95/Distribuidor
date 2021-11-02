@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primaryadmin"
+    android:padding="16dp"
+    tools:context=".UI.Registers.RegisterActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="vertical"
+      android:layout_height="wrap_content"
+      tools:ignore="UselessParent">
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_super_user"
+        android:layout_height="80dp"/>
+
+    <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+        android:layout_width="match_parent"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:text="Crea un Super-Usuario"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content">
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="wrap_content"
+          android:id="@+id/til_dni"
+          android:hint="DNI"
+          android:layout_weight="1"
+          android:textColorHint="@color/quantum_grey"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+          android:layout_height="60dp">
+
+        <com.aukde.distribuidor.Utils.UbuntuEditText
+            android:layout_width="match_parent"
+            android:id="@+id/edt_dni"
+            android:maxLength="8"
+            android:inputType="number"
+            android:layout_height="40dp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <Button
+          android:id="@+id/btn_edit_dni"
+          android:layout_width="0dp"
+          android:text="Editar"
+          android:layout_marginStart="10dp"
+          android:layout_gravity="bottom"
+          android:layout_weight="1"
+          android:textSize="12sp"
+          android:visibility="gone"
+          android:textColor="@color/white"
+          android:backgroundTint="@color/secondaryadminvariant"
+          android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/til_fullname"
+        android:visibility="gone"
+        android:hint="Nombre Completo"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/quantum_grey"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_height="wrap_content">
+
+      <com.aukde.distribuidor.Utils.UbuntuEditText
+          android:layout_width="match_parent"
+          android:id="@+id/edt_fullname"
+          android:enabled="false"
+          android:inputType="textCapSentences"
+          android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Email"
+        android:id="@+id/til_email"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/quantum_grey"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_height="wrap_content">
+
+      <com.aukde.distribuidor.Utils.UbuntuEditText
+          android:layout_width="match_parent"
+          android:id="@+id/edt_email"
+          android:inputType="textEmailAddress"
+          android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:hint="Conraseña"
+        app:passwordToggleEnabled="true"
+        android:id="@+id/til_password"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/quantum_grey"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_height="wrap_content">
+
+      <com.aukde.distribuidor.Utils.UbuntuEditText
+          android:layout_width="match_parent"
+          android:id="@+id/edt_password"
+          android:inputType="textPassword"
+          android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/til_auth_pass"
+        app:passwordToggleEnabled="true"
+        android:hint="Clave de autorización"
+        android:layout_marginTop="12dp"
+        android:textColorHint="@color/quantum_grey"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_height="wrap_content">
+
+      <com.aukde.distribuidor.Utils.UbuntuEditText
+          android:layout_width="match_parent"
+          android:id="@+id/edt_auth_pass"
+          android:inputType="textPassword"
+          android:layout_height="wrap_content"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/primaryadminvariant"
+        android:textColor="@color/white"
+        android:text="Registrar Usuario"
+        android:padding="16dp"
+        android:layout_height="wrap_content"/>
+
+  </LinearLayout>
+
+  </LinearLayout>

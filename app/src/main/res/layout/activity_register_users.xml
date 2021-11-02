@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/primaryadmin"
+    tools:context=".UI.Registers.RegisterUsersActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content">
+
+        <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:text="Seleccione el tipo de usuario : "
+            android:layout_height="wrap_content"/>
+
+        <Spinner
+            android:id="@+id/sp_users"
+            android:background="@color/lightgray"
+            android:backgroundTint="@color/lightgray"
+            android:layout_marginStart="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:id="@+id/til_dni"
+                android:hint="DNI"
+                android:layout_weight="1"
+                android:textColorHint="@color/quantum_grey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="60dp">
+
+                <com.aukde.distribuidor.Utils.UbuntuEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edt_dni"
+                    android:maxLength="8"
+                    android:inputType="number"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_edit_dni"
+                android:layout_width="0dp"
+                android:text="Editar"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:textSize="12sp"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/secondaryadminvariant"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_fullname"
+            android:visibility="gone"
+            android:hint="Nombre Completo"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_fullname"
+                android:enabled="false"
+                android:inputType="textCapSentences"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="Email"
+            android:id="@+id/til_email"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_email"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:hint="Conraseña"
+            app:passwordToggleEnabled="true"
+            android:id="@+id/til_password"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_password"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/primaryadminvariant"
+            android:textColor="@color/white"
+            android:text="Registrar Usuario"
+            android:padding="16dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

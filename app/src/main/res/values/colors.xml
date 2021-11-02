@@ -7,4 +7,18 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="lightgray">#EAEAEA</color>
+
+    <color name="primaryadmin">#4A235A</color>
+    <color name="primaryadminvariant">#6C3483</color>
+
+    <color name="secondaryadmin">#A569BD</color>
+    <color name="secondaryadminvariant">#8E44AD</color>
+
+    <color name="primaryworker"></color>
+    <color name="primaryworkervariant"></color>
+
+    <color name="primarydriver"></color>
+    <color name="primarydrivervariant"></color>
+
 </resources>

@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.aukde.distribuidor">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the "MyLocation" functionality.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission
+        android:name="android.permission.REBOOT"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:allowBackup="true"
@@ -9,7 +25,54 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Distribuidor">
-        <activity android:name=".MainActivity">
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".UI.Maps.MapClientActivity"
+            android:label="@string/title_activity_map_client"></activity>
+        <activity android:name=".UI.Registers.RegisterClient" />
+        <activity android:name=".UI.Manager.ManageClients" />
+        <activity android:name=".UI.Menu.WorkerMenu" />
+
+        <service
+            android:name=".Services.ForegroundService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="location" />
+
+        <activity android:name=".UI.Manager.ManageProductActivity" />
+        <activity android:name=".UI.Registers.RegisterUsersActivity" />
+        <activity android:name=".UI.Manager.ManageUsersActivity" />
+        <activity android:name=".UI.Menu.MenuSuperAdmin" />
+        <activity android:name=".UI.Menu.MenuAdmin" />
+        <activity
+            android:name=".UI.Registers.RegisterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Maps.MapWorkerActivity"
+            android:label="@string/title_activity_map_worker"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.Maps.MapDriverActivity"
+            android:label="@string/title_activity_map_driver" />
+        <activity
+            android:name=".UI.Registers.ProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UI.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

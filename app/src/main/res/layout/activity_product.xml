@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/primaryadmin"
+    tools:context=".UI.Registers.ProductActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_product_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_product_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/lightgray"
+            android:scaleType="fitXY"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/iv_add_image_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+           android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="16dp"
+            android:src="@drawable/ic_add_photo_24"
+            tools:ignore="ContentDescription,UnusedAttribute" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_name_product"
+            android:hint="Nombre de producto"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_name_product"
+                android:inputType="textCapSentences"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:layout_width="wrap_content"
+                android:text="Categoría"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:id="@+id/sp_category"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_code_product"
+            android:hint="Código de producto"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_code_product"
+                android:inputType="number"
+                android:maxLength="9"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:layout_width="wrap_content"
+                android:text="Métrica"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="11dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:id="@+id/til_quantity"
+                android:hint="Cantidad"
+                android:textColorHint="@color/quantum_grey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="match_parent">
+
+                <com.aukde.distribuidor.Utils.UbuntuEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edt_quantity"
+                    android:inputType="number"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:layout_weight="1"
+                android:layout_marginEnd="5dp"
+                android:background="@color/white"
+                android:id="@+id/sp_metrics"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/til_unit"
+                android:hint="Unidades"
+                android:textColorHint="@color/quantum_grey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="match_parent">
+
+                <com.aukde.distribuidor.Utils.UbuntuEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edt_unit"
+                    android:inputType="number"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:layout_width="wrap_content"
+                android:text="Sub-Métrica"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:layout_marginEnd="5dp"
+                android:layout_height="match_parent"/>
+
+            <Spinner
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:id="@+id/sp_sub_metrics"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_sub_unit"
+            android:hint="Sub-Unidad"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_sub_unit"
+                android:inputType="number"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/til_quantity_magnitude"
+                android:layout_marginRight="5dp"
+                android:hint="Magnitud"
+                android:textColorHint="@color/quantum_grey"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="match_parent">
+
+                <com.aukde.distribuidor.Utils.UbuntuEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/edt_quantity_magnitude"
+                    android:inputType="numberDecimal"
+                    android:layout_height="match_parent"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:layout_weight="1"
+                android:id="@+id/sp_magnitude"
+                android:background="@color/white"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_price_whole"
+            android:hint="Precio por mayor"
+            app:suffixText="S/"
+            app:suffixTextAppearance="@color/secondaryadmin"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_price_whole"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_price_pack"
+            android:hint="Precio por pack"
+            app:suffixText="S/"
+            app:suffixTextAppearance="@color/secondaryadmin"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_price_pack"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_price_unit"
+            android:hint="Precio por unidad"
+            app:suffixText="S/"
+            app:suffixTextAppearance="@color/secondaryadmin"
+            android:layout_marginTop="12dp"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_price_unit"
+                android:inputType="numberDecimal"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_register_product"
+            android:layout_width="match_parent"
+            android:backgroundTint="@color/secondaryadmin"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="10dp"
+            android:text="Registrar Producto"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

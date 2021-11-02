@@ -4,6 +4,9 @@ data class Clients  (
     val id : String = "",
     val dni : String = "",
     val nombre : String = "",
-    val perfil : String = "",
-    val email : String = "",
-    val password : String = "")
+    val codigo : String = "",
+    val zona : String = "",
+    val telefono : String = "",
+    val direccion : String = "",
+    val latitud : Double = 0.0,
+    val longitud : Double = 0.0)

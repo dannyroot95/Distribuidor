@@ -13,7 +13,7 @@ class GeofireProvider (reference: String) {
     private var mDatabase: DatabaseReference = FirebaseDatabase.getInstance().reference.child(reference)
     private var mGeofire: GeoFire = GeoFire(mDatabase)
 
-    fun saveLocation(idDriver: String?, latLng: LatLng) {
+    fun saveLocation(idDriver: String, latLng: LatLng) {
         mGeofire.setLocation(idDriver, GeoLocation(latLng.latitude, latLng.longitude))
     }
 
@@ -25,7 +25,7 @@ class GeofireProvider (reference: String) {
         mGeofire.removeLocation(idDriver)
     }
 
-    fun getActiveDrivers(latLng: LatLng, radius: Double): GeoQuery? {
+    fun getActiveDrivers(latLng: LatLng, radius: Double): GeoQuery {
         val geoQuery =
             mGeofire.queryAtLocation(GeoLocation(latLng.latitude, latLng.longitude), radius)
         geoQuery.removeAllListeners()

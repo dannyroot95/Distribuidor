@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ly_item"
+    android:layout_marginTop="4dp"
+    android:padding="6dp"
+    android:background="#F9F9F9"
+    android:layout_marginBottom="4dp"
+    android:orientation="vertical"
+    android:foreground="?attr/selectableItemBackground"
+    tools:ignore="UnusedAttribute">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+                android:id="@+id/it_name"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:id="@+id/it_address"
+                android:textSize="16sp"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+</LinearLayout>

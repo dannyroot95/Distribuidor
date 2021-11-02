@@ -1,18 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@color/primaryadmin"
+    tools:context=".UI.LoginActivity">
 
-    <TextView
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:orientation="vertical"
+       android:padding="10dp"
+       android:layout_height="wrap_content">
+
+       <ImageView
+           android:layout_width="match_parent"
+           android:layout_gravity="center"
+           android:src="@drawable/title"
+           android:layout_height="200dp"/>
+       <com.aukde.distribuidor.Utils.UbuntuTextViewMedium
+           android:layout_width="match_parent"
+           android:textAlignment="center"
+           android:textSize="16dp"
+           android:text="Aplicación de distribución"
+           android:textColor="@color/white"
+           android:layout_marginTop="-30dp"
+           android:layout_height="wrap_content"/>
+
+   </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_email"
+            android:layout_marginTop="60dp"
+            android:hint="Email"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_email"
+                android:inputType="textEmailAddress"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/til_password"
+            android:hint="Constraseña"
+            android:layout_marginTop="12dp"
+            app:passwordToggleEnabled="true"
+            android:textColorHint="@color/quantum_grey"
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edt_password"
+                android:inputType="textPassword"
+                android:layout_height="wrap_content"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="5dp"
+            android:text="Olvidé mi constraseña?"
+            android:textColor="@color/quantum_grey"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="@color/primaryadminvariant"
+            android:textColor="@color/white"
+            android:text="Iniciar Sesíon"
+            android:padding="16dp"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewRegular
+                android:id="@+id/tv_don_t_have_an_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="No tienes una cuenta?"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+                android:id="@+id/tv_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foreground="?attr/selectableItemBackground"
+                android:padding="5dp"
+                android:text="Registrar"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.aukde.distribuidor.Utils.UbuntuTextViewBold
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="v1.0"
+        android:textSize="12sp"
+        android:padding="10dp"
+        android:layout_gravity="right"
+        android:gravity="bottom"
+        android:textColor="@color/white"
+        android:layout_height="match_parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

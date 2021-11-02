@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/primaryadmin"
+    tools:context=".UI.Manager.ManageProductActivity">
+
+    <Button
+        android:id="@+id/btn_register_product"
+        android:layout_width="match_parent"
+        android:padding="12dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="Agregar nuevo producto"
+        android:drawableTop="@drawable/ic_add_24"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.SearchView
+        android:layout_width="match_parent"
+        android:background="@drawable/background_searchview"
+        android:id="@+id/search_product"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Buscar producto..."
+        android:layout_marginBottom="6dp"
+        app:iconifiedByDefault="false"
+        android:inputType="textCapSentences"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_products"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

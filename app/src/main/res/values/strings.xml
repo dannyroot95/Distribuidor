@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Distribuidor</string>
+    <string name="title_activity_map_driver">Map</string>
+    <string name="title_activity_map_worker">Map</string>
+    <string name="description">description</string>
+    <string name="title_activity_map_client">Map</string>
 </resources>

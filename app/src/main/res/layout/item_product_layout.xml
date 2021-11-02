@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingBottom="16dp"
+    tools:ignore="RtlSymmetry,UnusedAttribute">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="18dp"
+        android:clickable="true"
+        android:id="@+id/card_item"
+        android:foreground="@drawable/click_card"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="7dp"
+        android:layout_height="wrap_content"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/it_image"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:src="@drawable/ic_add_photo_24"
+            android:layout_height="150dp"
+            android:contentDescription="@string/description" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+                android:textAlignment="center"
+                android:id="@+id/it_name_product"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewMedium
+                android:id="@+id/it_code"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewMedium
+                android:id="@+id/it_price_total"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewMedium
+                android:id="@+id/it_price_unit"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+            <com.aukde.distribuidor.Utils.UbuntuTextViewBold
+                android:id="@+id/it_stock"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
